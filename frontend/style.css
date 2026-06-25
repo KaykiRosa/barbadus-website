@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../assets/logomarca.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Camada escura sobre a imagem */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+/* Conteúdo principal */
+.hero {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    max-width: 900px;
+    padding: 40px;
+
+    gap: 20px;
+}
+
+/* Título */
+.welcome-text {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(4rem, 7vw, 6rem);
+    letter-spacing: 3px;
+
+    color: #FFFFFF;
+}
+
+/* Parágrafos */
+.paragraph {
+    margin: 0;
+
+    max-width: 700px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.6;
+
+    color: #E5E5E5;
+}
+
+/* Botão Instagram */
+.instagram-btn {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90px;
+    height: 90px;
+
+    background-color: #C39A5B;
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition: transform .3s ease,
+        background-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* Ícone */
+.instagram-icon {
+    width: 48px;
+    height: 48px;
+}
+
+/* Efeito ao passar o mouse */
+.instagram-btn:hover {
+    background-color: #D4AF37;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
